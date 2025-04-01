@@ -1,0 +1,5 @@
+genai_lvlup/
+.env
+**/__pycache__/
+*.pyc
+*.log
