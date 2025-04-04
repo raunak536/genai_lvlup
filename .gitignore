@@ -3,3 +3,4 @@ genai_lvlup/
 **/__pycache__/
 *.pyc
 *.log
+*.pdf
