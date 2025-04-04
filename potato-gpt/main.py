@@ -18,7 +18,7 @@ if __name__ == '__main__':
 		system_prompt = open(f'prompts/bully_prompt.txt').read()
 	else:
 		raise Exception(f"Incorrect option!")
-	chat_history = [{'role':'assistant','content':system_prompt}]
+	chat_history = [{'role':'system','content':system_prompt}]
 	user_input = prompt.Prompt.ask("[green]USER : [/green]")
 	chat_history.append({'role':'user', 'content':user_input})
 	while user_input != '/exit':
@@ -28,22 +28,22 @@ if __name__ == '__main__':
 		user_input = prompt.Prompt.ask("[green]USER : [/green]")
 		if user_input == '/funny':
 			system_prompt = open(f'prompts/{user_input[1:]}_prompt.txt').read()
-			chat_history.append({'role':'assistant', 'content':system_prompt})
+			chat_history[0] = {'role':'system', 'content':system_prompt}
 			user_input = prompt.Prompt.ask("[green]USER : [/green]")
 			chat_history.append({'role':'user', 'content':user_input})
 		elif user_input == '/wise':
 			system_prompt = open(f'prompts/{user_input[1:]}_prompt.txt').read()
-			chat_history.append({'role':'assistant', 'content':system_prompt})
+			chat_history[0] = {'role':'system', 'content':system_prompt}
 			user_input = prompt.Prompt.ask("[green]USER : [/green]")
 			chat_history.append({'role':'user', 'content':user_input})
 		elif user_input == '/depressed':
 			system_prompt = open(f'prompts/{user_input[1:]}_prompt.txt').read()
-			chat_history.append({'role':'assistant', 'content':system_prompt})
+			chat_history[0] = {'role':'system', 'content':system_prompt}
 			user_input = prompt.Prompt.ask("[green]USER : [/green]")
 			chat_history.append({'role':'user', 'content':user_input})
 		elif user_input == '/bully':
 			system_prompt = open(f'prompts/{user_input[1:]}_prompt.txt').read()
-			chat_history.append({'role':'assistant', 'content':system_prompt})
+			chat_history[0] = {'role':'system', 'content':system_prompt}
 			user_input = prompt.Prompt.ask("[green]USER : [/green]")
 			chat_history.append({'role':'user', 'content':user_input})
 		elif user_input == '/save':
