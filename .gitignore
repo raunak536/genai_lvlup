@@ -4,3 +4,5 @@ genai_lvlup/
 *.pyc
 *.log
 *.pdf
+*.DS_Store
+
