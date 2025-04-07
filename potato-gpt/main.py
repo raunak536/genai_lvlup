@@ -20,7 +20,6 @@ if __name__ == '__main__':
 		raise Exception(f"Incorrect option!")
 	chat_history = [{'role':'system','content':system_prompt}]
 	user_input = prompt.Prompt.ask("[green]USER : [/green]")
-	chat_history.append({'role':'user', 'content':user_input})
 	while user_input != '/exit':
 		response = chat_with_gpt(chat_history)
 		chat_history.append({"role": 'assistant', "content": response.output_text})
