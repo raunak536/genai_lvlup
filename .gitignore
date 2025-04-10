@@ -3,6 +3,7 @@ genai_lvlup/
 **/__pycache__/
 *.pyc
 *.log
+*.pkl
 *.pdf
 *.DS_Store
 *.ipynb
