@@ -1,4 +1,4 @@
-from openai import OpenAI, api_key
+from openai import OpenAI
 client = OpenAI()
 
 def chat_with_gpt(user_input):
